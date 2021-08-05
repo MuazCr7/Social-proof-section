@@ -54,6 +54,8 @@ body {
 }
 .rating > div {
     display: flex;
+    background-color: hsl(303, 10%, 53%, 0.2);
+    padding: 15px 45px 15px 20px
 }
 .rating > div:first-of-type {
     transform: translateX(20px);
@@ -172,6 +174,9 @@ body {
     .attribution {
         position: absolute;
         bottom: 10px;
+        text-align: center;
+        margin-right: 50px;
+        margin-left: 50px;
     }
 }
 .attribution {
