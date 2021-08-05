@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+:root {
+    --soft-pink: hsl(333, 80%, 67%);
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    margin: auto 50px;
+}
+.text {
+    flex-basis: 50%;
+}
+.text h2 {
+    font-size: 2.7rem;
+    color: var(--very-dark-magenta);
+    margin-bottom: 1.1rem;
+    padding-right: 150px;
+}
+.text p {
+    color: var(--dark-grayish-magenta);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.rating {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+}
+.rating > div {
+    display: flex;
+}
+.rating > div:first-of-type {
+    transform: translateX(20px);
+}
+.rating > div:nth-child(2) {
+    transform: translateX(80px);
+}
+.rating > div:nth-child(3) {
+    transform: translateX(140px);
+}
+.rating > div p {
+    color: var(--very-dark-magenta);
+    font-weight: bold;
+    margin-left: 2rem;
+}
+.cards-holder {
+    flex-basis: 100%;
+    display: flex;
+    margin-top: 50px
+}
+.cards-holder > div {
+    background-color: var(--very-dark-magenta);
+    padding: 40px 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    flex: 1;
+}
+.cards-holder > div:nth-of-type(2) {
+    transform: translateY(20px);
+}
+.cards-holder > div:nth-of-type(3) {
+    transform: translateY(40px);
+    margin-right: 0;
+}
+.cards-holder > div .top {
+    display: flex;
+    margin-bottom: 30px;
+}
+.cards-holder > div .top img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px 
+}
+.cards-holder > div .top .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cards-holder > div .top .name span:first-child {
+    color: white;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.cards-holder > div .top .name span:nth-child(2) {
+    color: var(--soft-pink);
+}
+.cards-holder > div .bottom {
+    color: var(--light-grayish-magenta)
+}
+.cards-holder > div .bottom p {
+    line-height: 1.7;
+}
+@media (max-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .container .text {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .container .text h2 {
+        padding: 0;
+    }
+    .container .text p {
+        margin-top: 30px
+    }
+    .container .rating {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .container .rating > div {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        transform: translateX(0);
+    }
+    .container .rating > div:last-of-type {
+        margin-bottom: 0;
+    }
+    .container .rating > div .stars-holder {
+        margin-bottom: 10px
+    }
+    .container .rating > div p {
+        margin-left: 0;
+    }
+    .container .cards-holder {
+        flex-direction: column;
+        margin-top: 70px
+    }
+    .container .cards-holder > div {
+        margin-right: 0;
+        transform: translateY(0);
+    }
+    .container .cards-holder > div:nth-child(2) {
+        margin-top: 20px
+    }
+    .container .cards-holder > div:nth-child(3) {
+        margin-top: 20px
+    }
+    .attribution {
+        position: absolute;
+        bottom: 10px;
+    }
+}
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+.attribution a {
+    text-decoration: none;
+    color: black
+}
+.attribution a:last-of-type {
+    color: var(--very-dark-magenta);
+    font-weight: bold;
+}
